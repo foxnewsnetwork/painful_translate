@@ -1,0 +1,1 @@
+require 'painful_translate'
