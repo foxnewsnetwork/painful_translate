@@ -53,7 +53,7 @@ This gem will open up selenium via capybara which, for most of you, will mean it
 
 I suggest this thing be used to make seed files and whatnot for nascent rails projects, and not actively in production.
 
-Because the scumbag engineers at Google are getting smart with users rapidly hitting their translate site, we now refresh the session each time and sleep 3 seconds for the page to load. Go grab a drink while you wait.
+Because the scumbag engineers at Google are getting smart with users rapidly hitting their translate site, we now refresh the session each time and sleep 2 seconds for the page to load. Go grab a drink while you wait.
 
 ---
 

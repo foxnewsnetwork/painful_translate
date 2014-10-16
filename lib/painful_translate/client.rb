@@ -1,10 +1,9 @@
-require 'singleton'
 class PainfulTranslate::Client
   class NoTargetLanguage < StandardError; end
 
   class << self
     def instance
-      new
+      @instance ||= new
     end
   end
 
