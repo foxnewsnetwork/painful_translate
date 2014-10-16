@@ -5,6 +5,6 @@ class PainfulTranslate::TranslationPage
   end
   def translation_output_strings
     sleep 2.seconds # give some time for Jewgle to look the page
-    session.find(:xpath, '//*[@id="result_box"]').all(:css, 'span.hps').map(&:text)
+    session.find(:xpath, '//*[@id="result_box"]').native.text.split "\n"
   end
 end

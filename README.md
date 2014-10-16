@@ -47,6 +47,16 @@ Sorry, not built yet
 
 ---
 
+## Important Caveat
+
+You can't translate strings with "\n" (newline) characters in it. This is because this translator uses newlines spread out batch translations to Google. So if you decide to try something like the following:
+
+```ruby
+# Will behave unpredictably
+PainfulTranslate.translate("Dear abbey,\n  I am a big idiot", "please respond" :to => :es, :from => :en) 
+```
+Every translations after the one where you introduced offending line will be off by the one came before it... and, because I haven't gotten around to writing code that will throw an error, you may need to prepare your anus for some serious post-production pain when your entire site is out of context
+
 ## A note on capybara and selenium and how this thing works
 
 This gem will open up selenium via capybara which, for most of you, will mean it actually opens up firefox and visits https://translate.google.com . It then fills out the translation form, and fetches the translated answer from the webpage. In other words, this is exactly what you (as a lowly human) would do if you had to translate something with Google. Consequently, this process is slow and painful.
