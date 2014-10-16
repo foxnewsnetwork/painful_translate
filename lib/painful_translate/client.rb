@@ -4,7 +4,7 @@ class PainfulTranslate::Client
 
   class << self
     def instance
-      @instance ||= new
+      new
     end
   end
 
